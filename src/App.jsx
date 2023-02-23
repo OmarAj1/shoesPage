@@ -2,7 +2,7 @@ import { Children, useState } from 'react'
 import {createBrowserRouter, RouterProvider, Route} from 'react-router-dom'
 import ShoesPage from './compenents/ShoesPage'
 import  HomePage  from './compenents/homePage'
-import NewArrivals  from './compenents/newArrivals'
+import NewArrivals  from './compenents/NewArrivals'
 import AboutUs  from './compenents/aboutUs'
 import { RootLayout } from './compenents/root'
 
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         element:<ShoesPage/>
       },
       {
-        path:"/newArrivals",
+        path:"/NewArrivals",
         element:<NewArrivals/>
       },
       {
