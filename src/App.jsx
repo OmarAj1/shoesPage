@@ -2,7 +2,7 @@ import { Children, useState } from 'react'
 import {createBrowserRouter, RouterProvider, Route} from 'react-router-dom'
 import ShoesPage from './compenents/ShoesPage'
 import  HomePage  from './compenents/homePage'
-import NewArrivals  from './compenents/NewArrivals'
+import NewArrivals  from './compenents/newArrivals'
 import AboutUs  from './compenents/aboutUs'
 import { RootLayout } from './compenents/root'
 
