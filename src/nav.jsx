@@ -13,10 +13,10 @@ export function MainNavBar(){
                 <FontAwesomeIcon icon={faShoePrints}></FontAwesomeIcon>
             </span>
             <ul id='list_sections'>
-                <li><Link className="link" to={"/"}>Home</Link></li>
-                <li><Link className="link" to={"/ShoesPage"}>ShoesPage</Link></li>
-                <li><Link className="link" to={"/NewArrivals"}>new arrivals</Link></li>
-                <li><Link className="link" to={"/aboutUs"}>About Us</Link></li>
+                <li className="Phone-hidden"><Link className="link" to={"/"}>Home</Link></li>
+                <li ><Link className="link" to={"/ShoesPage"}>ShoesPage</Link></li>
+                <li className="Phone-hidden"><Link className="link" to={"/NewArrivals"}>new arrivals</Link></li>
+                <li className="Phone-hidden"><Link className="link" to={"/aboutUs"}>About Us</Link></li>
             </ul>
         </nav>
     </header>

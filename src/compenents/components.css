@@ -1,0 +1,27 @@
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card  {
+    padding: 20px;
+    margin: 10px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#price h2 {
+    color:red;
+}
+#price  {
+    display:flex ;
+    align-items:center;
+    justify-content:space-between;
+    width: 160px;
+}
+img{
+    width: 350px;
+    height: 250px;
+    border-radius: 5px;
+}

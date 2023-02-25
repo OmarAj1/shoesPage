@@ -1,6 +1,8 @@
 html,body {
   margin: 0;
   padding: 0;
+  background: rgb(228,132,59);
+  background: linear-gradient(90deg, rgba(228,132,59,1) 0%, rgba(94,78,78,1) 100%);
 }
 #list_sections {
   list-style: none;
@@ -28,4 +30,11 @@ nav {
 .link {
   text-decoration: none;
   color: black;
+}
+
+@media only screen and (max-width: 500px)  {
+.Phone-hidden{
+display: none;
+}
+
 }

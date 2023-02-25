@@ -1,15 +1,95 @@
+// import React, { useState, useEffect } from "react";
+// import Card from "./card";
+// import "./components.css";
+// import CardPage from "./CardPage";
+// import { useNavigate } from "react-router-dom";
+
+
+// function ShoesPage() {
+//   const navigate = useNavigate();
+//   const [shoesData, setShoesData] = useState(() => {
+//     const data = localStorage.getItem("shoesData");
+//     return data ? JSON.parse(data) : [];
+//   });
+//   const [selectedShoe, setSelectedShoe] = useState(null);
+  
+//   useEffect(() => {
+//     fetch("https://63f75b7ae40e087c958cdca4.mockapi.io/shoes")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       setShoesData(data);
+//       localStorage.setItem("shoesData", JSON.stringify(data));
+//     })
+//     .catch((error) => console.error(error));
+//   }, []);
+  
+// function handleClick(shoe) {
+//   setSelectedShoe(shoe);
+//   navigate("/CardPage"); // Navigate to the CardPage component
+// }
+
+//   localStorage.setItem("selectedShoe", JSON.stringify(selectedShoe));
+//   function selected ()
+//   {
+//   }
+//   return (
+//     <>
+//       <div className="cards-container">
+//         {shoesData.map((shoe) => (
+//           <Card
+//           key={shoe.id}
+//           name={shoe.Name}
+//           price={shoe.price}
+//           url={shoe.Img}
+//           onClick={() => handleClick(shoe)}
+//           />
+//           ))}
+//       </div>
+//   { selectedShoe && <CardPage shoe={selectedShoe} />}s
+//     </>
+//       );
+//     }
+    
+//     export default ShoesPage;
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { MainNavBar } from "../nav";
 import Card from "./card";
+import './components.css';
+import CardPage from "./CardPage";
 
-function ShoesPage(){
-    return <>
-    <h1>omar</h1>
-    <Card name="qqqq" price="60.0" url= "https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg"/>
-    </>
+function ShoesPage() {
+const [shoesData, setShoesData] = useState(() => {
+const data = localStorage.getItem("shoesData");
+return data ? JSON.parse(data) : [];
+});
+const [selectedShoe, setSelectedShoe] = useState(null);
 
-    // map of cards => instead of props values filled with the api values 
+useEffect(() => {
+fetch("https://63f75b7ae40e087c958cdca4.mockapi.io/shoes")
+.then(response => response.json())
+.then(data => {
+setShoesData(data);
+localStorage.setItem("shoesData", JSON.stringify(data));
+})
+.catch(error => console.error(error));
+}, []);
+
+function handleClick(shoe) {
+setSelectedShoe(shoe);
 }
+
+
+return (
+<>
+    <div className="cards-container">
+        {shoesData.map((shoe) => (
+        <Card key={shoe.id} name={shoe.Name} price={shoe.price} url={shoe.Img} onClick={()=> handleClick(shoe)}
+            />
+            ))}
+    </div>
+    {selectedShoe &&
+    <CardPage shoe={selectedShoe} />}
+</>
+);
+}
+
 export default ShoesPage;
-// 177 176 lectures
