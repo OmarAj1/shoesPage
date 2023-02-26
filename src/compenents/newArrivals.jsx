@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-function NewArrivals(){
+function NewArrivals() {
     return <>
-    NewArrivals
+        NewArrivals
     </>
 }
 export default NewArrivals;
